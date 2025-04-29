@@ -14,8 +14,8 @@ const ViewAttendance = () => {
   useEffect(() => {
     const fetchAttendanceData = async () => {
       try {
-       const response = await axios.get('http://localhost:8080/admin/attendance/today'); 
-        // const response = await axios.get('https://final-attendance.onrender.com/admin/attendance/today'); 
+      // const response = await axios.get('http://localhost:8080/admin/attendance/today'); 
+         const response = await axios.get('https://employee-attendance-31ex.onrender.com/admin/attendance/today'); 
        
       console.log('Fetched Attendance Data:', response.data); 
 
@@ -60,8 +60,8 @@ const ViewAttendance = () => {
     if (!selectedDate) return;
   
     try {
-       const response = await axios.get(`http://localhost:8080/admin/attendance/date?date=${selectedDate}`);
-      //  const response = await axios.get(`https://final-attendance.onrender.com/admin/attendance/date?date=${selectedDate}`);
+      // const response = await axios.get(`http://localhost:8080/admin/attendance/date?date=${selectedDate}`);
+        const response = await axios.get(`https://employee-attendance-31ex.onrender.com/admin/attendance/date?date=${selectedDate}`);
       console.log('Fetched Attendance Data for selected date:', response.data);
   
       // NEW: Filter data to get the most recent attendance record for each user
@@ -93,8 +93,8 @@ const ViewAttendance = () => {
           if (userId) {
             try {
               const durationResponse = await axios.get(
-                 `http://localhost:8080/admin/attendance/duration?userId=${userId}&date=${selectedDate}`
-                  // `https://final-attendance.onrender.com/admin/attendance/duration?userId=${userId}&date=${selectedDate}`
+                 //`http://localhost:8080/admin/attendance/duration?userId=${userId}&date=${selectedDate}`
+                   `https://employee-attendance-31ex.onrender.com/admin/attendance/duration?userId=${userId}&date=${selectedDate}`
               );
               const duration = durationResponse.data || 'N/A';
               return { ...record, duration }; // Add duration to each record

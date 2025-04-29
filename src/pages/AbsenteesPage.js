@@ -14,8 +14,8 @@ function AbsenteesPage() {
     }
     try {
       console.log("Fetching absentees for date:", date);
-      // const response = await axios.get('https://final-attendance.onrender.com/admin/absentees', {
-       const response = await axios.get('http://localhost:8080/admin/absentees', {
+       const response = await axios.get('https://employee-attendance-31ex.onrender.com/admin/absentees', {
+       //const response = await axios.get('http://localhost:8080/admin/absentees', {
         params: { date },
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,

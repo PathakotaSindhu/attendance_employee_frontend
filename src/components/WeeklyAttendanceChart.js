@@ -39,7 +39,8 @@ const WeeklyAttendanceChart = () => {
 
   const fetchWeeklyAttendanceData = async () => {
     try {
-      const response = await fetch('http://localhost:8080/api/admin/weekly?startDate=2025-04-15&endDate=2025-04-22');
+     // const response = await fetch('http://localhost:8080/api/admin/weekly?startDate=2025-04-15&endDate=2025-04-22');
+      const response = await fetch('https://employee-attendance-31ex.onrender.com/api/admin/weekly?startDate=2025-04-15&endDate=2025-04-22');
       const data = await response.json();
       console.log('Fetched weekly data:', data);
 

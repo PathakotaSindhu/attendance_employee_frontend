@@ -15,7 +15,8 @@ const Candidates = () => {
   const fetchCandidates = () => {
     setIsLoading(true);
     axios
-      .get('http://localhost:8080/api/auth/employees')
+     //get('http://localhost:8080/api/auth/employees')
+      .get('https://employee-attendance-31ex.onrender.com/api/auth/employees')
       .then(response => {
         setCandidates(response.data);
         setFilteredCandidates(response.data);
@@ -53,7 +54,8 @@ const Candidates = () => {
   // Handle delete functionality
   const handleDelete = (employeeId) => {
     axios
-      .delete(`http://localhost:8080/api/auth/delete/${employeeId}`)
+     //delete(`http://localhost:8080/api/auth/delete/${employeeId}`)
+     .delete(`https://employee-attendance-31ex.onrender.com/api/auth/delete/${employeeId}`)
       .then(() => {
         alert('Candidate deleted successfully');
         const updatedList = candidates.filter(candidate => candidate.employeeId !== employeeId);
@@ -69,7 +71,8 @@ const Candidates = () => {
   // Handle saving the edited candidate
   const handleSave = () => {
     axios
-      .put(`http://localhost:8080/api/auth/update/${editCandidate.employeeId}`, editCandidate)
+     //put(`http://localhost:8080/api/auth/update/${editCandidate.employeeId}`, editCandidate)
+      .put(`https://employee-attendance-31ex.onrender.com/api/auth/update/${editCandidate.employeeId}`, editCandidate)
       .then(() => {
         alert('Candidate updated successfully');
         const updatedList = candidates.map(candidate =>

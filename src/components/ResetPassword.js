@@ -21,7 +21,9 @@ const ResetPassword = () => {
         }
 
         try {
-            const response = await axios.post('http://localhost:8080/api/auth/reset-password', {
+            const response = await axios.post('https://employee-attendance-31ex.onrender.com/api/auth/reset-password', {
+             // const response = await axios.post('http://localhost:8080/api/auth/reset-password', {
+
                 token,
                 newPassword
             });

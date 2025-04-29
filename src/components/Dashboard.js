@@ -69,7 +69,8 @@ function Dashboard() {
 
     const fetchTotalStudents = async () => {
       try {
-        const response = await fetch('http://localhost:8080/api/admin/employees/count', {
+       //onst response = await fetch('http://localhost:8080/api/admin/employees/count', {
+          const response = await fetch("https://employee-attendance-31ex.onrender.com/api/admin/employees/count", {
           headers: { Authorization: `Bearer ${token}` },
         });
         const data = await response.json();
@@ -81,7 +82,8 @@ function Dashboard() {
 
     const fetchPresentToday = async () => {
       try {
-        const response = await fetch("http://localhost:8080/api/attendance/count/today", {
+        const response = await fetch("https://employee-attendance-31ex.onrender.com/api/attendance/count/today", {
+      //const response = await fetch("http://localhost:808/api/attendance/count/today", {
           headers: {
             "Content-Type": "application/json",
             Authorization: `Bearer ${token}`,
@@ -96,7 +98,8 @@ function Dashboard() {
 
     const fetchOnLeaveCount = async () => {
       try {
-        const response = await fetch('http://localhost:8080/api/attendance/count/today', {
+        const response = await fetch('https://employee-attendance-31ex.onrender.com/api/attendance/count/today', {
+        // const response = await fetch('http://localhost:8080/count/today', {
           headers: { Authorization: `Bearer ${token}` },
         });
         const data = await response.json();
@@ -108,7 +111,8 @@ function Dashboard() {
 
     const fetchAbsentCount = async () => {
       try {
-        const response = await fetch('http://localhost:8080/api/attendance/absent-today', {
+        const response = await fetch('https://employee-attendance-31ex.onrender.com/api/attendance/absent-today', {
+          // const response = await fetch('http:/localhost:8080e/absent-today', {
           headers: { Authorization: `Bearer ${token}` },
         });
         const data = await response.json();
@@ -121,7 +125,8 @@ function Dashboard() {
 
     const fetchWeeklyReport = async () => {
       try {
-        const response = await fetch('http://localhost:8080/api/admin/weekly-report', {
+        const response = await fetch('https://employee-attendance-31ex.onrender.com/api/admin/weekly-report', {
+         //onst response = await fetch('http://localhost:8080/api/admin/weekly-report', {
           headers: { Authorization: `Bearer ${token}` },
         });
         const data = await response.json();

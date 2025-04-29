@@ -2,8 +2,8 @@
 
 import axios from "axios";
 
-  // const API_URL = "https://final-attendance.onrender.com/admin"; // Update with your backend URL
- const API_URL = "http://localhost:8080/admin"; 
+   const API_URL = "https://employee-attendance-31ex.onrender.com/admin"; // Update with your backend URL
+ //const API_URL = "http://localhost:8080/admin"; 
 export const getAllUsers = async () => {
   try {
     const response = await axios.get(`${API_URL}/users`);

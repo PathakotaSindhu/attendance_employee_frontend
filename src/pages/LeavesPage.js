@@ -17,8 +17,8 @@ const LeavesPage = () => {
         }
 
         const response = await axios.get(
-          // `https://final-attendance.onrender.com/admin/leaveRequests`,
-          `http://localhost:8080/admin/leaveRequests`,
+           `https://employee-attendance-31ex.onrender.com/admin/leaveRequests`,
+          //`http://localhost:8080/admin/leaveRequests`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -46,8 +46,8 @@ const LeavesPage = () => {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.get(
-        `https://final-attendance.onrender.com/admin/leaveRequests/${requestId}/approve`,
-        //`http://localhost:8080/admin/leaveRequests/${requestId}/approve`,
+        `https://employee-attendance-31ex.onrender.com/admin/leaveRequests/${requestId}/approve`,
+       // `http://localhost:8080/admin/leaveRequests/${requestId}/approve`,
         { status: "Approved" }, // Send the status as "Approved" for the leave request
         {
           headers: {
@@ -72,7 +72,7 @@ const LeavesPage = () => {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.get(
-        `https://final-attendance.onrender.com/admin/leaveRequests/${requestId}/reject`,
+        `https://employee-attendance-31ex.onrender.com/admin/leaveRequests/${requestId}/reject`,
         //`http://localhost:8080/admin/leaveRequests/${requestId}/reject`,
         { status: "Rejected" }, // Send the status as "Rejected" for the leave request
         {

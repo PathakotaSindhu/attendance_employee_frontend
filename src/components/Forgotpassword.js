@@ -141,7 +141,8 @@ function ForgotPassword() {
     setMessage("");
 
     try {
-      const response = await axios.post("http://localhost:8080/api/auth/forgot-password", { email });
+      const response = await axios.post("https://employee-attendance-31ex.onrender.com/api/auth/forgot-password", { email });
+      //const response = await axios.post("https://employee-attendance-31ex.onrender.com/api/auth/forgot-password", { email });
 
       console.log("✅ FULL RESPONSE OBJECT:", response);
       console.log("📦 response.data:", response.data);

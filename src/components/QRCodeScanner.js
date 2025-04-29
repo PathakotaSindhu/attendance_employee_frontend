@@ -753,7 +753,8 @@ const QRCodeScanner = () => {
 
     const fetchInstituteId = async (instituteName) => {
         try {
-            const response = await axios.get('http://localhost:8080/api/institute/id', {
+            const response = await axios.get('https://employee-attendance-31ex.onrender.com/api/institute/id', {
+            // const response = await axios.get('http://localhost:8080/api/institute/id', {
                 params: { instituteName }
             });
             return response.data;
@@ -766,7 +767,8 @@ const QRCodeScanner = () => {
 
     const markAttendance = async (employeeId, instituteId) => {
         try {
-            const response = await axios.post('http://localhost:8080/api/attendance/mark', {
+            const response = await axios.post('https://employee-attendance-31ex.onrender.com/api/attendance/mark', {
+            //const response = await axios.post('http://localhost:8080/api/attendance/mark', {    
                 employeeId,
                 instituteId
             });
